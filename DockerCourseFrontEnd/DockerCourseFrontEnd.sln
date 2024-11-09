@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerCourseFrontEnd", "DockerCourseFrontEnd\DockerCourseFrontEnd\DockerCourseFrontEnd.csproj", "{C2B02386-ADEB-4C56-9C47-68999EDE03A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerCourseFrontEnd", "DockerCourseFrontEnd\DockerCourseFrontEnd.csproj", "{C2B02386-ADEB-4C56-9C47-68999EDE03A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerCourseFrontEnd.Client", "DockerCourseFrontEnd\DockerCourseFrontEnd.Client\DockerCourseFrontEnd.Client.csproj", "{DC4A54BE-85CC-462D-9DB1-FF89978CA0E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerCourseFrontEnd.Client", "DockerCourseFrontEnd.Client\DockerCourseFrontEnd.Client.csproj", "{DC4A54BE-85CC-462D-9DB1-FF89978CA0E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
