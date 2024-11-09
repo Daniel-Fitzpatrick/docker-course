@@ -2,7 +2,7 @@ services:
 
   frontend:
     build:
-      context: ./DockerCourseFrontend/.
+      context: ./DockerCourseFrontEnd/.
       dockerfile: DockerCourseFrontEnd/Dockerfile
       args:
         HTTP_PROXY: http://10.32.22.18:8080
