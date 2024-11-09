@@ -1,0 +1,41 @@
+services:
+
+  frontend:
+    build:
+      context: ./DockerCourseFrontend/.
+      dockerfile: DockerCourseFrontEnd/DockerCourseFrontend/Dockerfile
+      args:
+        HTTP_PROXY: http://10.32.22.18:8080
+        HTTPS_PROXY: http://10.32.22.18:8080
+    image: danielfitzwork/dockerfrontend
+    container_name: frontend
+    ports:
+      - 1234:8080
+
+  api:
+    build:
+      context: ./DockerCourseApi/.
+      dockerfile: DockerCourseApi/Dockerfile
+      args:
+        HTTP_PROXY: http://10.32.22.18:8080
+        HTTPS_PROXY: http://10.32.22.18:8080
+    image: danielfitzwork/dockerapi
+    container_name: api  
+    ports:
+      - 17860:8080
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: database
+    environment:
+      - ACCEPT_EULA=true
+      - MSSQL_SA_PASSWORD=Password1234
+    ports:
+      - 1433:1433
+
+  database-seed:
+    build:
+      context: Database/.
+      dockerfile: Dockerfile
+    depends_on: [ database ] 
+    container_name: database-seed

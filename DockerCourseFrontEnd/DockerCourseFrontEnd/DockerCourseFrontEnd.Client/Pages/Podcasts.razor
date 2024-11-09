@@ -1,0 +1,30 @@
+﻿@page "/Podcasts"
+@inject HttpClient HttpClient
+@rendermode InteractiveAuto
+
+<PageTitle>Podcasts</PageTitle>
+
+<h1>Podcast App!</h1>
+
+Welcome to your new podcast app.
+
+@if (_podcasts is not null)
+{
+    <ul>
+        @foreach (string podcast in _podcasts)
+        {
+            <li>@podcast</li>
+        }
+    </ul>
+}
+
+<button class="btn btn-primary" @onclick="GetPodcasts">Get Podcasts</button>
+
+@code {
+    private List<string>? _podcasts;
+
+    private async Task GetPodcasts()
+    {
+        _podcasts = await HttpClient.GetFromJsonAsync<List<string>>("http://localhost:17860/podcasts");
+    }
+}
