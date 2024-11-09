@@ -32,5 +32,5 @@ jobs:
           file: ./DockerCourseFrontend/DockerCourseFrontend/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/frontend:${{github.run_number}}
+            ${{ secrets.DOCKERHUB_USERNAME }}/dockerfrontend:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/dockerfrontend:${{github.run_number}}
